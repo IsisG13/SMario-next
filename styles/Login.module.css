@@ -19,36 +19,94 @@
 
 .conteudo input {
   border: 2px solid #7bacff;
-  width: 38%;
-  height: 45px;
+  width: 220%;
+  height: 63px;
+  margin-left: -52%;
   border-radius: 7px;
   text-align: center;
 }
 
 .conteudo button {
-    height: 50px;
-    width: 240%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #7bacff;
-    background-color: white; 
-    color: #858484;
-    font-weight: bold;
-    cursor: pointer;
+  height: 67px;
+  width: 200%;
+  margin-left: -40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #7bacff;
+  background-color: white;
+  color: #858484;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .conteudo button:hover {
-    height: 55px;
-    width: 300%;
-    margin-left: -38%;
-    color: white;
-    border: 2px solid #7bacff;
-    background-color: #7bacff;
-    cursor: pointer;
+  height: 60px;
+  width: 210%;
+  margin-left: -45%;
+  color: white;
+  border: 2px solid #7bacff;
+  background-color: #7bacff;
+  cursor: pointer;
 }
 
 .link {
-    text-decoration: none;
-    margin-left: -9%;
+  text-decoration: none;
+  margin-left: -9%;
+}
+
+.cabecalho {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  justify-content: space-around;
+}
+
+.cabecalho_link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cabecalho span {
+  color: #6390d9;
+}
+
+.input {
+  border-color: transparent;
+  height: 25px;
+  background-color: transparent;
+}
+
+.search {
+  padding-left: 1%;
+  height: 42px;
+  width: 22%;
+  border: 2px solid #a7c0ea;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.login button {
+  color: #ffffff;
+  font-size: 97%;
+  font-weight: bold;
+  height: 49px;
+  width: 175%;
+  background-color: #8ca5ce;
+  border: 2px solid #8ca5ce;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: -52%;
+}
+
+.link_login {
+  text-decoration: none;
 }

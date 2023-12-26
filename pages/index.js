@@ -85,32 +85,57 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Cabecalho/>
+      <div className="cabecalho">
+        <Link className="cabecalho_link" href="/">
+          <h1>
+            Player<span>One</span>
+          </h1>
+        </Link>
+        <div className="search">
+          <input className="input" type="text" placeholder="Pesquisa" />
+          <FaSearch
+            style={{
+              width: "1em",
+              height: "1em",
+              color: "#A7C0EA",
+            }}
+          />
+        </div>
+        <div className="login">
+          <Link className="link_login" href="/login">
+            <button>Login</button>
+          </Link>
+        </div>
+      </div>
 
       <div className={styles.banner}>
-        <Image className={styles.banner} src={banner.src} />
+        <div className={styles.bannerOverlay}></div>
+        <Image className={styles.bannerImage} src={banner.src} />
         <h1>{banner.title}</h1>
         <p>{banner.description}</p>
-
         <button>Super Mario</button>
       </div>
 
       <div className={styles.conteudo}>
         <h1>Super Mario</h1>
-        <div>
+        <div className={styles.conteudoContainer}>
           {superMario.map((item, index) => (
-            <div className={styles.conteudo_imagens} key={index}>
+            <div className={styles.conteudoItem} key={index}>
               <Image
                 className={styles.imagens}
                 src={item.src}
                 width={item.width}
                 height={item.height}
               />
-              {/* <p>{item.text}</p>
-              <p>Preço: {item.price}</p> */}
+              <p>{item.text}</p>
+              <p>Preço: {item.price}</p>
             </div>
           ))}
         </div>
+      </div>
+
+      <div className={styles.alerta}>
+        <h1>Faça login para visualizar a pagina completa!</h1>
       </div>
     </header>
   );

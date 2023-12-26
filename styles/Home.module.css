@@ -1,69 +1,4 @@
 @media (max-width: 980px) {
-  .cabecalho {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    background-color: white;
-    justify-content: space-around;
-  }
-
-  .cabecalho span {
-    color: #6390d9;
-  }
-
-  .input {
-    border-color: transparent;
-    height: 25px;
-    background-color: transparent;
-  }
-
-  .search {
-    padding-left: 1%;
-    height: 42px;
-    width: 22%;
-    border: 2px solid #a7c0ea;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-  }
-
-  .login button {
-    color: #8ca5ce;
-    font-size: 97%;
-    font-weight: bold;
-    height: 49px;
-    width: 175%;
-    background-color: transparent;
-    border: 2px solid #6893da;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-left: -52%;
-  }
-
-  .login button:hover {
-    color: #ffffff;
-    font-size: 97%;
-    font-weight: bold;
-    height: 49px;
-    width: 175%;
-    background-color: #8ca5ce;
-    border: 2px solid #8ca5ce;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-left: -52%;
-  }
-
-  .link_login {
-    text-decoration: none;
-  }
-
   .banner {
     margin-top: -9%;
     width: 100%;
@@ -71,16 +6,33 @@
     flex-direction: column;
   }
 
+  .bannerOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 107vh;
+    background: linear-gradient(rgb(0 0 0 / 42%), rgb(0 0 0 / 42%));
+    z-index: 5;
+  }
+  
+  .bannerImage {
+    width: 100%;
+    z-index: 0;
+  }
+
   .banner h1 {
     margin-left: 3%;
     color: white;
     margin-top: -13%;
+    z-index: 2;
   }
 
   .banner p {
     margin-left: 3%;
     color: white;
     margin-top: 1%;
+    z-index: 2;
   }
 
   .banner button {
@@ -90,19 +42,47 @@
     height: 33px;
     /* font-weight: bold; */
     color: white;
-    background-color: #628FD9;
-    border: 2px solid #628FD9;
+    background-color: #628fd9;
+    border: 2px solid #628fd9;
+    z-index: 2;
+  }
+
+  .conteudo h1 {
+    margin-left: 3%;
   }
 
   .conteudo {
+    /* margin-top: 20px; */
     margin-top: 5%;
-    /* margin-left: 3%; */
+  }
+
+  .conteudoContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .conteudoItem {
+    flex: 1 1;
+    margin: 2.6%;
+    /* margin: 27px; */
+    text-align: center;
   }
 
   .imagens {
-    display: grid;
-    border-radius: 10px;
-    margin: 0.5%;
+    border-radius: 8px;
+    margin-bottom: 10px;
   }
-    
+
+  .alerta {
+    text-align: center;
+    display: flex;
+    width: 57%;
+    height: 145px;
+    margin-top: -63%;
+    margin-left: 20%;
+    background-color: white;
+    z-index: 6;
+    position: fixed;
+    align-items: center;
+  }
 }
