@@ -118,15 +118,11 @@
 
   .alerta {
     text-align: center;
-    display: flex;
     width: 56%;
     height: 145px;
     margin-top: -60%;
-    margin-left: 20%;
-    background-color: white;
-    z-index: 6;
-    position: fixed;
-    align-items: center;
+    margin-left: 2%;
+    margin-bottom: 1%;
   }
 }
 

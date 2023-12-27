@@ -23,7 +23,7 @@ export default function Home() {
 
       <div className="cabecalho">
         <Link className="cabecalho_link" href="/">
-        <Icon color="#628FD9" width="3rem" icon="ph:game-controller" />
+          <Icon color="#628FD9" width="3rem" icon="ph:game-controller" />
           <h1>
             Player<span>One</span>
           </h1>
@@ -47,7 +47,11 @@ export default function Home() {
 
       <div className={styles.banner}>
         <div className={styles.bannerOverlay}></div>
-        <Image className={styles.bannerImage} src={banner.src} alt="Chápeu do Mario" />
+        <Image
+          className={styles.bannerImage}
+          src={banner.src}
+          alt="Chápeu do Mario"
+        />
         <h1>{banner.title}</h1>
         <p>{banner.description}</p>
         <button>Super Mario</button>
@@ -70,10 +74,32 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        
       </div>
 
-      <div className={styles.alerta}>
-        <h1>Faça login para visualizar a pagina completa!</h1>
+      <div className="rodapeInicial">
+        <div className={styles.alerta}>
+          <h1>Faça login para visualizar a pagina completa!</h1>
+        </div>
+        <Link className="cabecalho_linkPaginaINicial" href="/">
+          <Icon color="#628FD9" width="3rem" icon="ph:game-controller" />
+          <h1>
+            Player<span>One</span>
+          </h1>
+        </Link>
+
+        <h4>
+          Desenvolvido por{" "}
+          <Link
+            className="linkRodape"
+            href="https://www.linkedin.com/in/isis-souza-979163295/"
+          >
+            {" "}
+            Isis Guimarães{" "}
+          </Link>
+          | 2023
+        </h4>
       </div>
     </header>
   );

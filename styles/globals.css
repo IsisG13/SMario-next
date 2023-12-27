@@ -135,12 +135,30 @@
   }
 
   .rodape {
+    margin-top: 16%;
+    width: 100%;
     display: flex;
     background-color: #EBF1FB;
-    height: 157px;
+    color: black;
+    height: 258px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+  }
+
+  .rodapeInicial {
+    margin-top: -38%;
+    display: flex;
+    background-color: #ebf1fb;
+    height: 264px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: fixed;
+    z-index: 6;
+    align-items: center;
+    padding-bottom: 4%;
   }
 
   .linkRodape {
