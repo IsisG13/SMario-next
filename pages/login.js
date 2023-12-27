@@ -50,7 +50,7 @@ export default function Login() {
           <form onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Nome"
+              placeholder="Nome: Ex.: Maria"
               value={nome}
               onChange={(e) => setNome(e.target.value)}
               required
@@ -60,7 +60,7 @@ export default function Login() {
 
             <input
               type="email"
-              placeholder="Email"
+              placeholder="Email: Ex.: teste@teste"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -70,7 +70,7 @@ export default function Login() {
 
             <input
               type="password"
-              placeholder="Senha"
+              placeholder="Senha com no mínimo 6 caracteres"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -81,7 +81,6 @@ export default function Login() {
             <button type="submit">Enviar</button>
           </form>
           {erro && <div className={styles.mensagemErro}>{erro}</div>}
-
           <div className="rodape">
             <Link className="cabecalho_linkPaginaINicial" href="/">
               <Icon color="#628FD9" width="3rem" icon="ph:game-controller" />
