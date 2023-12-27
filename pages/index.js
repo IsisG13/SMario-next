@@ -88,7 +88,7 @@ export default function Home() {
             {" "}
             Isis Guimarães{" "}
           </Link>
-          | 2023
+          | 2023 ♡
         </h4>
       </div>
     </header>

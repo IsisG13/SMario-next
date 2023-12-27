@@ -90,7 +90,7 @@ export default function Login() {
               </h1>
             </Link>
 
-            <h4>Desenvolvido por Isis Guimarães | 2023</h4>
+            <h4>Desenvolvido por Isis Guimarães | 2023 ♡</h4>
           </div>
         </div>
       </div>
