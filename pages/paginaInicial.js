@@ -6,11 +6,20 @@ import Image from "next/image";
 import { conteudo } from "./api/conteudo";
 import Link from "next/link";
 import Cabecalho from "./api/cabecalho";
+import { useState } from "react";
 
 export default function Home() {
-  const { banner, superMario } = conteudo;
-  const { consoles } = conteudo;
-  const { diversos } = conteudo;
+  const { banner, superMario, consoles, diversos } = conteudo;
+  const [busca, setBusca] = useState("");
+
+  const filtrarConteudo = (categoria) =>
+    categoria.filter((item) =>
+      item.text.toLowerCase().includes(busca.toLowerCase())
+    );
+
+  const marioFiltrado = filtrarConteudo(superMario);
+  const consolesFiltrados = filtrarConteudo(consoles);
+  const diversosFiltrados = filtrarConteudo(diversos);
 
   return (
     <header>
@@ -30,6 +39,8 @@ export default function Home() {
         </Link>
         <div className="searchPaginaInicial">
           <input
+            value={busca}
+            onChange={(ev) => setBusca(ev.target.value)}
             className="inputPaginaInicial"
             type="text"
             placeholder="Pesquisa"
@@ -58,56 +69,75 @@ export default function Home() {
       </div>
 
       <div className={styles.conteudo}>
-        <h1>Super Mario</h1>
-        <div className={styles.conteudoContainer}>
-          {superMario.map((item, index) => (
-            <div className={styles.conteudoItem} key={index}>
-              <Image
-                className={styles.imagens}
-                src={item.src}
-                alt={item.text}
-                width={item.width}
-                height={item.height}
-              />
-              <p>{item.text}</p>
-              <p>{item.price}</p>
-            </div>
-          ))}
-        </div>
+  {marioFiltrado.length > 0 && (
+    <>
+      <h1>Super Mario</h1>
+      <div className={styles.conteudoContainer}>
+        {marioFiltrado.map((item, index) => (
+          <div className={styles.conteudoItem} key={index}>
+            <Image
+              className={styles.imagens}
+              src={item.src}
+              alt={item.text}
+              width={item.width}
+              height={item.height}
+            />
+            <p>{item.text}</p>
+            <p>{item.price}</p>
+          </div>
+        ))}
+      </div>
+    </>
+  )}
 
-        <h1>Consoles</h1>
-        <div className={styles.conteudoContainer}>
-          {consoles.map((item, index) => (
-            <div className={styles.conteudoItem} key={index}>
-              <Image
-                className={styles.imagens}
-                src={item.src}
-                alt={item.text}
-                width={item.width}
-                height={item.height}
-              />
-              <p>{item.text}</p>
-              <p>{item.price}</p>
-            </div>
-          ))}
-        </div>
+  {consolesFiltrados.length > 0 && (
+    <>
+      <h1>Consoles</h1>
+      <div className={styles.conteudoContainer}>
+        {consolesFiltrados.map((item, index) => (
+          <div className={styles.conteudoItem} key={index}>
+            <Image
+              className={styles.imagens}
+              src={item.src}
+              alt={item.text}
+              width={item.width}
+              height={item.height}
+            />
+            <p>{item.text}</p>
+            <p>{item.price}</p>
+          </div>
+        ))}
+      </div>
+    </>
+  )}
 
-        <h1>Diversos</h1>
-        <div className={styles.conteudoContainer}>
-          {diversos.map((item, index) => (
-            <div className={styles.conteudoItem} key={index}>
-              <Image
-                className={styles.imagens}
-                src={item.src}
-                alt={item.text}
-                width={item.width}
-                height={item.height}
-              />
-              <p>{item.text}</p>
-              <p>{item.price}</p>
-            </div>
-          ))}
-        </div>
+  {diversosFiltrados.length > 0 && (
+    <>
+      <h1>Diversos</h1>
+      <div className={styles.conteudoContainer}>
+        {diversosFiltrados.map((item, index) => (
+          <div className={styles.conteudoItem} key={index}>
+            <Image
+              className={styles.imagens}
+              src={item.src}
+              alt={item.text}
+              width={item.width}
+              height={item.height}
+            />
+            <p>{item.text}</p>
+            <p>{item.price}</p>
+          </div>
+        ))}
+      </div>
+    </>
+  )}
+
+  {marioFiltrado.length === 0 &&
+    consolesFiltrados.length === 0 &&
+    diversosFiltrados.length === 0 && (
+      <p>Nenhum resultado encontrado</p>
+    )}
+
 
         <div className="rodape">
           <Link className="cabecalho_linkPaginaINicial" href="/">
@@ -119,7 +149,10 @@ export default function Home() {
 
           <h4>
             Desenvolvido por{" "}
-            <Link className="linkRodape" href="https://www.linkedin.com/in/isis-souza-979163295/">
+            <Link
+              className="linkRodape"
+              href="https://www.linkedin.com/in/isis-souza-979163295/"
+            >
               {" "}
               Isis Guimarães{" "}
             </Link>

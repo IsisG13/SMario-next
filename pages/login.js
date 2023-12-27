@@ -13,7 +13,7 @@ export default function Login() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [erro, setErro] = useState(""); // Novo estado para armazenar a mensagem de erro
+  const [erro, setErro] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ export default function Login() {
     if (nome.trim() === "" || email.trim() === "" || password.length < 6) {
       setErro("A senha deve ter pelo menos 6 caracteres.");
       return;
-    } 
+    }
 
     setErro("");
     router.push("/paginaInicial");
@@ -29,7 +29,27 @@ export default function Login() {
 
   return (
     <>
-      <Cabecalho />
+      <div className={styles.cabecalho}>
+        <Link className={styles.cabecalho_link} href="/">
+          <h1>
+            Player<span>One</span>
+          </h1>
+        </Link>
+        <div className={styles.search}>
+          <input
+            className={styles.input}
+            type="text"
+            placeholder="Pesquisa"
+          />
+          <FaSearch
+            style={{
+              width: "1em",
+              height: "1em",
+              color: "#A7C0EA",
+            }}
+          />
+        </div>
+      </div>
 
       <div className={styles.login_container}>
         <h1>Fazer Login</h1>

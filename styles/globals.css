@@ -75,6 +75,14 @@
     background-color: transparent;
   }
 
+  input::placeholder {
+    color: gray;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
   .inputPaginaInicial {
     border-color: transparent;
     height: 25px;
