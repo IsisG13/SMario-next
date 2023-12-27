@@ -133,6 +133,7 @@
   }
   
   .login_container h1 {
+    margin-top: 10%;
     margin-bottom: 5%;
   }
   
@@ -194,8 +195,10 @@
   }
   
   .cabecalho_link {
+    display: flex;
     text-decoration: none;
     cursor: pointer;
+    flex-direction: column;
   }
 
   .cabecalho_link h1 {
@@ -213,16 +216,16 @@
   }
   
   .search {
-    padding-left: 1%;
+    padding-left: 0%;
     height: 42px;
-    width: 22%;
+    width: 57%;
     border: 2px solid #a7c0ea;
     border-radius: 50px;
     display: flex;
     align-items: center;
   }
   
-  .login button {
+  .loginActive button {
     color: #ffffff;
     font-size: 97%;
     font-weight: bold;
@@ -236,7 +239,7 @@
     margin-left: -52%;
   }
   
-  .link_login {
+  .link_login_active {
     text-decoration: none;
   }  
 }

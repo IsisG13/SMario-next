@@ -28,16 +28,6 @@ export default function Home() {
             Player<span>One</span>
           </h1>
         </Link>
-        <div className="search">
-          <input className="input" type="text" placeholder="Pesquisa" />
-          <FaSearch
-            style={{
-              width: "1em",
-              height: "1em",
-              color: "#A7C0EA",
-            }}
-          />
-        </div>
         <div className="login">
           <Link className="link_login" href="/login">
             <button>Login</button>

@@ -31,16 +31,18 @@ export default function Login() {
     <>
       <div className={styles.cabecalho}>
         <Link className={styles.cabecalho_link} href="/">
+          <Icon color="#628FD9" width="3rem" icon="ph:game-controller" />
           <h1>
             Player<span>One</span>
           </h1>
         </Link>
-        <div className={styles.search}>
-          <input
-            className={styles.input}
-            type="text"
-            placeholder="Pesquisa"
-          />
+        <div className={styles.loginActive}>
+          <Link className={styles.link_login_active} href="/login">
+            <button>Login</button>
+          </Link>
+        </div>
+        {/* <div className={styles.search}>
+          <input className={styles.input} type="text" placeholder="Pesquisa" />
           <FaSearch
             style={{
               width: "1em",
@@ -48,7 +50,7 @@ export default function Login() {
               color: "#A7C0EA",
             }}
           />
-        </div>
+        </div> */}
       </div>
 
       <div className={styles.login_container}>
