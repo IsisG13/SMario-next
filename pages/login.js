@@ -4,6 +4,7 @@ import styles from "@/styles/Login.module.css";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import { Icon } from "@iconify/react";
 
 export default function Login() {
   const router = useRouter();
@@ -25,21 +26,12 @@ export default function Login() {
   return (
     <>
       <div className={styles.cabecalho}>
-      <Link className={styles.cabecalho_link} href="/">
-        <h1>
-          Player<span>One</span>
-        </h1>
+        <Link className={styles.cabecalho_link} href="/">
+          <Icon color="#628FD9" width="3rem" icon="ph:game-controller" />
+          <h1>
+            Player<span>One</span>
+          </h1>
         </Link>
-        <div className={styles.search}>
-          <input className={styles.input} type="text" placeholder="Pesquisa" />
-          <FaSearch
-            style={{
-              width: "1em",
-              height: "1em",
-              color: "#A7C0EA",
-            }}
-          />
-        </div>
 
         <div className={styles.login}>
           <Link className={styles.link_login} href="/login">
@@ -85,6 +77,17 @@ export default function Login() {
 
             <button type="submit">Enviar</button>
           </form>
+
+          <div className="rodape">
+            <Link className="cabecalho_linkPaginaINicial" href="/">
+              <Icon color="#628FD9" width="3rem" icon="ph:game-controller" />
+              <h1>
+                Player<span>One</span>
+              </h1>
+            </Link>
+
+            <h4>Desenvolvido por Isis Guimarães | 2023</h4>
+          </div>
         </div>
       </div>
     </>

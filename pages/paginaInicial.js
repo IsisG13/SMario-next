@@ -1,6 +1,7 @@
 import Head from "next/head";
+import { Icon } from "@iconify/react";
 import styles from "@/styles/Home.module.css";
-import { FaSearch } from "react-icons/fa";
+import { FaGamepad, FaSearch } from "react-icons/fa";
 import Image from "next/image";
 import { conteudo } from "./api/conteudo";
 import Link from "next/link";
@@ -8,6 +9,8 @@ import Cabecalho from "./api/cabecalho";
 
 export default function Home() {
   const { banner, superMario } = conteudo;
+  const { consoles } = conteudo;
+  const { diversos } = conteudo;
 
   return (
     <header>
@@ -18,14 +21,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="cabecalho">
-        <Link className="cabecalho_link" href="/">
+      <div className="cabecalhoPaginaInicial">
+        <Link className="cabecalho_linkPaginaINicial" href="/">
+          <Icon color="#628FD9" width="3rem" icon="ph:game-controller" />
           <h1>
             Player<span>One</span>
           </h1>
         </Link>
-        <div className="search">
-          <input className="input" type="text" placeholder="Pesquisa" />
+        <div className="searchPaginaInicial">
+          <input
+            className="inputPaginaInicial"
+            type="text"
+            placeholder="Pesquisa"
+          />
           <FaSearch
             style={{
               width: "1em",
@@ -36,8 +44,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.banner}>
-        <Image className={styles.banner} src={banner.src} />
+      <div className={styles.bannerPaginaInicial}>
+        <div className={styles.bannerOverlayPaginaInicial}></div>
+        <Image
+          className={styles.bannerPaginaInicial}
+          src={banner.src}
+          alt="Chápeu do Mario"
+        />
         <h1>{banner.title}</h1>
         <p>{banner.description}</p>
 
@@ -52,13 +65,66 @@ export default function Home() {
               <Image
                 className={styles.imagens}
                 src={item.src}
+                alt={item.text}
                 width={item.width}
                 height={item.height}
               />
               <p>{item.text}</p>
-              <p>Preço: {item.price}</p>
+              <p>{item.price}</p>
             </div>
           ))}
+        </div>
+
+        <h1>Consoles</h1>
+        <div className={styles.conteudoContainer}>
+          {consoles.map((item, index) => (
+            <div className={styles.conteudoItem} key={index}>
+              <Image
+                className={styles.imagens}
+                src={item.src}
+                alt={item.text}
+                width={item.width}
+                height={item.height}
+              />
+              <p>{item.text}</p>
+              <p>{item.price}</p>
+            </div>
+          ))}
+        </div>
+
+        <h1>Diversos</h1>
+        <div className={styles.conteudoContainer}>
+          {diversos.map((item, index) => (
+            <div className={styles.conteudoItem} key={index}>
+              <Image
+                className={styles.imagens}
+                src={item.src}
+                alt={item.text}
+                width={item.width}
+                height={item.height}
+              />
+              <p>{item.text}</p>
+              <p>{item.price}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="rodape">
+          <Link className="cabecalho_linkPaginaINicial" href="/">
+            <Icon color="#628FD9" width="3rem" icon="ph:game-controller" />
+            <h1>
+              Player<span>One</span>
+            </h1>
+          </Link>
+
+          <h4>
+            Desenvolvido por{" "}
+            <Link className="linkRodape" href="https://www.linkedin.com/in/isis-souza-979163295/">
+              {" "}
+              Isis Guimarães{" "}
+            </Link>
+            | 2023
+          </h4>
         </div>
       </div>
     </header>
