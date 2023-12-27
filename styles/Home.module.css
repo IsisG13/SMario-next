@@ -1,3 +1,131 @@
+.banner {
+  margin-top: -5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 107vh;
+  background: linear-gradient(rgb(0 0 0 / 42%), rgb(0 0 0 / 42%));
+  z-index: 5;
+}
+
+.bannerImage {
+  width: 100%;
+  z-index: 0;
+}
+
+.banner h1 {
+  font-size: 253%;
+  margin-left: 3%;
+  color: #b0b0b0;
+  margin-top: -9%;
+  z-index: 6;
+}
+
+.banner p {
+  margin-left: 3%;
+  color: white;
+  margin-top: 1%;
+  z-index: 2;
+}
+
+.banner button {
+  margin-top: 1%;
+  margin-left: 3%;
+  width: 16%;
+  height: 33px;
+  /* font-weight: bold; */
+  color: white;
+  background-color: #628fd9;
+  border: 2px solid #628fd9;
+  z-index: 2;
+}
+
+.bannerOverlayPaginaInicial {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 48vh;
+  background: linear-gradient(rgb(0 0 0 / 42%), rgb(0 0 0 / 42%));
+  z-index: 5;
+}
+
+.bannerPaginaInicial h1 {
+  font-size: 240%;
+  margin-left: 3%;
+  color: white;
+  margin-top: -9%;
+  z-index: 6;
+}
+
+.bannerPaginaInicial button {
+  margin-top: 1%;
+  margin-left: 3%;
+  width: 16%;
+  height: 33px;
+  /* font-weight: bold; */
+  color: white;
+  background-color: #628fd9;
+  border: 2px solid #628fd9;
+  z-index: 6;
+}
+
+.bannerPaginaInicial p {
+  margin-left: 3%;
+  color: #dfdbdb;
+  margin-top: 1%;
+  z-index: 6;
+}
+
+.bannerPaginaInicial {
+  margin-top: -3%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudo h1 {
+  margin-left: 3%;
+}
+
+.conteudo {
+  /* margin-top: 20px; */
+  margin-top: 5%;
+}
+
+.conteudoContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.conteudoItem {
+  flex: 1 1;
+  margin: 2.6%;
+  /* margin: 27px; */
+  text-align: center;
+}
+
+.imagens {
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.alerta {
+  text-align: center;
+  width: 56%;
+  height: 145px;
+  margin-top: -60%;
+  margin-left: 2%;
+  margin-bottom: 1%;
+}
+
 @media (max-width: 980px) {
   .banner {
     margin-top: -9%;

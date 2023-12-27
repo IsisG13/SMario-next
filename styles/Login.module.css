@@ -1,3 +1,128 @@
+.mensagemErro {
+  margin-top: 8%;
+  color: red;
+  margin-bottom: -170px;
+}
+
+.login_container {
+  margin-top: 9%;
+  background-color: #a7c0ea;
+  min-height: 71vh;
+  color: white;
+  padding-top: 5%;
+  text-align: center;
+}
+
+.login_container h1 {
+  margin-top: -3%;
+  margin-bottom: 4%;
+}
+
+.conteudo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.conteudo input {
+  border: 2px solid #7bacff;
+  width: 220%;
+  height: 63px;
+  margin-left: -52%;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.conteudo button {
+  margin-bottom: -130%;
+  height: 67px;
+  width: 200%;
+  margin-left: -40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #7bacff;
+  background-color: white;
+  color: #858484;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.conteudo button:hover {
+  height: 67px;
+  width: 200%;
+  margin-left: -40%;
+  color: white;
+  border: 2px solid #7bacff;
+  background-color: #7bacff;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  margin-left: -9%;
+}
+
+.cabecalho {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  justify-content: space-around;
+}
+
+.cabecalho_link {
+  font-size: 140%;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cabecalho span {
+  color: #6390d9;
+}
+
+.input {
+  border-color: transparent;
+  height: 25px;
+  background-color: transparent;
+}
+
+.search {
+  padding-left: 1%;
+  height: 42px;
+  width: 22%;
+  border: 2px solid #a7c0ea;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.loginActive button {
+  color: #ffffff;
+  font-size: 97%;
+  font-weight: bold;
+  height: 49px;
+  width: 175%;
+  background-color: #8ca5ce;
+  border: 2px solid #8ca5ce;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: -52%;
+}
+
+.link_login_active {
+  text-decoration: none;
+}  
+
 @media (max-width: 980px) {
   .mensagemErro {
     color: red;
@@ -103,7 +228,7 @@
     align-items: center;
   }
   
-  .login button {
+  .loginActive button {
     color: #ffffff;
     font-size: 97%;
     font-weight: bold;
@@ -117,7 +242,7 @@
     margin-left: -52%;
   }
   
-  .link_login {
+  .link_login_active {
     text-decoration: none;
   }  
 }

@@ -41,16 +41,6 @@ export default function Login() {
             <button>Login</button>
           </Link>
         </div>
-        {/* <div className={styles.search}>
-          <input className={styles.input} type="text" placeholder="Pesquisa" />
-          <FaSearch
-            style={{
-              width: "1em",
-              height: "1em",
-              color: "#A7C0EA",
-            }}
-          />
-        </div> */}
       </div>
 
       <div className={styles.login_container}>
